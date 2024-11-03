@@ -632,10 +632,15 @@ Also affects 'linum-mode' background."
                                                      :line-width 1
                                                      :style nil)))))
 
+   ;; tool-bar
+   `(tool-bar
+     ((,monokai-class (:background ,monokai-gray-d))
+      (,monokai-256-class (:background ,monokai-256-gray-d))))
+
    ;; tab-line
    `(tab-line
-     ((,monokai-class (:height 1.4 :background ,monokai-gray-d))
-      (,monokai-256-class (:height 1.4 :background ,monokai-256-gray-d))))
+     ((,monokai-class (:inherit tool-bar :height 1.4))
+      (,monokai-256-class (:inherit tool-bar :height 1.4))))
 
    `(tab-line-highlight
      ((,monokai-class (:inherit tab-line :background ,monokai-highlight))
